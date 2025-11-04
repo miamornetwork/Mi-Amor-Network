@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MIAMOR — CONNECT, CHAT & EARN</title>
+  <meta name="description" content="MiAmor — Earn ₦10,000 daily for connecting and chatting with people on mi amor. No experience needed, No hidden secrets, just chat and earn massively" />
+  <style>
+    :root{
+      --accent:#2563eb; /* sharp blue */
+      --accent-light:#d0e2ff; /* light blue accents */
+      --muted:#374151;
+      --bg:#f9fbff;
+      --card:#ffffff;
+      --radius:12px;
+      --maxw:1100px;
+      font-family: Inter, "Times New Roman", tahoma;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:var(--maxw);margin:0 auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+    nav{display:none}
+    .cta {background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .hero{padding:48px 18px;text-align:center;background:linear-gradient(180deg,#d0e2ff,#f9fbff);border-radius:14px}
+    .hero h1{color:var(--accent);font-size:28px;margin:8px 0;font-weight:900}
+    .hero p{color:var(--muted);max-width:840px;margin:0 auto}
+    .actions{margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    section{padding:44px 0;border-bottom:1px solid #e0e7ff}
+    h2{color:var(--accent);margin:0 0 8px;font-size:20px}
+    .lead{color:var(--muted);max-width:900px;margin:0 auto 12px;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+    .card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(15,23,42,0.04);border:1px solid #e0e7ff}
+    .price{font-weight:900;color:var(--accent);margin-top:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:12px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:10px;background:var(--accent-light)}
+
+    footer{padding:26px 0;text-align:center;color:var(--muted)}
+
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}
+    .modal{background:#fff;width:100%;max-width:520px;border-radius:12px;padding:18px;box-shadow:0 20px 50px rgba(2,6,23,0.3)}
+    .modal h3{margin:0 0 6px;color:var(--accent)}
+    .field{margin-top:10px}
+    .field label{display:block;font-weight:700;margin-bottom:6px;font-size:14px}
+    .field input,.field select{width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;font-size:14px}
+    .modal .small{font-size:13px;color:var(--muted);margin-top:8px}
+    .modal .row{display:flex;gap:8px;margin-top:12px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800;border:0;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    .close-btn{background:#f3f4f6;border-radius:8px;padding:8px 10px;border:0;cursor:pointer}
+    @media(min-width:760px){ nav{display:flex;gap:14px;align-items:center} .hero h1{font-size:34px} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+  <img src="logo.png" alt="Logo Image" style="width: 100%; height: 50px; display: block; margin: 0 auto;">
+        </div>
+        <div>
+          <div style="font-weight:800;color:var(--accent)">MiAmor</div>
+          <div style="font-size:13px;color:var(--muted)">Chat • Earn • Connect</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#how" style="color:#374151;text-decoration:none">How it works</a>
+        <a href="#pricing" style="color:#374151;text-decoration:none">Pricing</a>
+        <a href="#gallery" style="color:#374151;text-decoration:none">Gallery</a>
+        <a class="cta open-modal" href="#" data-source="header">Register</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <p style="text-align:center;"><h1>MIAMOR - The Future of Chatting & Earning</h1>
+      <p><strong>Earn ₦5,000 - ₦10,000 daily for chatting and connecting on mi amor.</strong> Stop connecting and chatting for free, connect your social media to miamor and get rewarded daily.</p>
+      <div class="actions">
+        <a class="btn open-modal" href="#" data-source="hero-getstarted">GET STARTED</a>
+      </div>
+  </div>
+      <img src="hero.jpg" alt="Hero image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    </section>
+
+    <!-- HOW -->
+    <section id="how">
+      <h2 style="text-align:center;">HOW IT WORKS</h2>
+      <p class="lead"> 🎯 MiAmor is a dynamic platform operating across multiple African and foreign countries, designed to help users find love, earn income through chatting and connecting with people, and gain valuable skills
+      </p>🎯It fosters meaningful connections, financial opportunities, and personal growth. 
+     <p></p>🎯MiAmor combines relationship-building with side hustel and skill development, with a strong focus on community and empowerment.
+    </div>
+
+    </section>     
+<h2 style="text-align:center;">HOW TO GET STARTED</h2>
+      <div class="grid">
+        <div class="card"><h3 style="text-align:center;">REGISTER & ACTIVATE</h3><p>Get started with the one time Enrollment fee — ₦10,000 or ₦14,000 and receive activation details.</p></div>
+        <div class="card"><h3 style="text-align:center;">CHAT & EARN</h3><p>Get paid $1 for each person you chat daily on miamor.
+        </p>1 chat = 1 dollar daily.
+        </p>5 chats = 5 dollars daily.
+        </p>10 chats = 10 dollars daily.
+        </p>The more people you chat the more you earn</p></div>
+        <img src="hero6.jpg" alt="Hero Image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        <div class="card"><h3 style="text-align:center;">INSTANT CASHBACK</h3><p>From the moment you sign up you receive a welcome cashback of ₦12,500 or ₦8,000 which you can withdraw immediately.</p></div>
+        <img src="hero5.jpg" alt="Hero Image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        <div class="card">
+  <h3 style="text-align:center;">CONNECT & EARN</h3><p>Each person you connect and match with rewards you ₦5,000-10,000 daily.Withdraw to your Bank account instantly.</p></div>
+      </div>
+      <img src="hero4.jpg" alt="Hero Image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <h2 style="text-align:center;">ENROLLMENT DETAILS</h2>
+      <p class="lead">One time activation fee with bonuses and VIP benefits.</p>
+      <div class="grid">
+        <div class="card">
+          <h3 style="text-align:center;">MIAMOR PLUS</h3>
+          <div class="price">₦10,000 (one-time)</div>
+          <ul style="color:var(--muted);margin-top:10px">
+            <li>Activation bonus: ₦8,000</li>
+            <li>Access to VIP mentorship community</li>
+            <li>Weekly online rewards</li>
+            <li>Onboarding & support</li>
+          </ul>
+          <div style="text-align:center;margin-top:12px">
+            <a class="btn open-modal" href="#" data-source="pricing-10k">REGISTER ₦10,000</a>
+          </div>
+        </div>
+        <div>
+        <img src="hero2.jpg" alt="Hero Image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+        <div class="card">
+          <h3 style="text-align:center;">MIAMOR ULTRA</h3>
+          <div class="price">₦14,000 (one-time)</div>
+          <ul style="color:var(--muted);margin-top:10px">
+            <li>Activation bonus: ₦12,500</li>
+            <li>Priority in VIP mentorship</li>
+            <li>Higher weekly online rewards</li>
+            <li>Priority payouts</li>
+          </ul>
+          <div style="text-align:center;margin-top:12px">
+            <a class="btn open-modal" href="#" data-source="pricing-14k">REGISTER ₦14,000</a>
+          </div>
+        </div>
+      <img src="hero3.jpg" alt="Hero Image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    </section>
+
+  <!-- GALLERY -->
+    <section id="gallery">
+      <h2 style="text-align:center;">GOVERNMENT APPROVED</h2>
+      <p class="lead">MiAmor is fully verified by the government because of it's legitimacy</p>
+      <div class="gallery">
+         <img src="hero1.jpg" alt="Hero Image" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    </section>
+  
+    <section id="register-cta">
+      <h2 style="text-align:center;">READY TO JOIN?</h2>
+      <p class="lead">Click the button below to get started✅.</p>
+      <div style="text-align:center;margin-top:12px">
+        <a class="btn open-modal" href="#" data-source="cta">REGISTER NOW</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>&copy; <span id="year"></span> MiAmor. All rights reserved.</div>
+      <div style="color:var(--muted);margin-top:6px">WhatsApp: +2347035172111</div>
+    </footer>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document" aria-labelledby="modal-title">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <h3 id="modal-title">Register — MiAmor</h3>
+        <button class="close-btn" id="closeModal" title="Close">✕</button>
+      </div>
+
+      <div style="margin-top:8px;color:var(--muted)">Fill the form below & click "Submit". You will be redirected to a secure checkout to complete your registration.</div>
+
+      <div style="margin-top:12px">
+        <div class="field">
+          <label>Full Name</label>
+          <input id="fullName" type="text" placeholder="Your full name" />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input id="email" type="email" placeholder="example@gmail.com" />
+        </div>
+        <div class="field">
+          <label>Phone Number</label>
+          <input id="phone" type="tel" placeholder="08024456314" />
+        </div>
+        <div class="field">
+          <label>Preferred Username</label>
+          <input id="username" type="text" placeholder="Example12" />
+        </div>
+        <div class="field">
+          <label>Select a package</label>
+          <select id="plan">
+            <option value="10000">₦10,000 (PLUS PACKAGE)</option>
+            <option value="14000">₦14,000 (ULTRA PACKAGE)</option>
+          </select>
+        </div>
+        
+        <div class="row" style="justify-content:flex-end">
+          <button class="close-btn" id="cancelBtn">Cancel</button>
+          <button class="btn" id="modalSubmit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Set current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const modal = document.getElementById('modal');    
+  const openButtons = document.querySelectorAll('.open-modal');    
+  const closeModalBtn = document.getElementById('closeModal');    
+  const cancelBtn = document.getElementById('cancelBtn');    
+  const modalSubmit = document.getElementById('modalSubmit');    
+
+  const selarLink = "https://selar.com/m/MiAmor-net";    
+
+  // --- TOOLTIP ALERT ---  
+  const tooltip = document.createElement('div');  
+  tooltip.id = 'tooltipAlert';  
+  tooltip.style.position = 'absolute';  
+  tooltip.style.backgroundColor = '#222';  
+  tooltip.style.color = '#fff';  
+  tooltip.style.padding = '8px 12px';  
+  tooltip.style.borderRadius = '6px';  
+  tooltip.style.fontSize = '13px';  
+  tooltip.style.fontFamily = 'Arial, sans-serif';  
+  tooltip.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';  
+  tooltip.style.display = 'none';  
+  tooltip.style.zIndex = '99999';  
+  tooltip.style.whiteSpace = 'nowrap';  
+  tooltip.style.textAlign = 'center';
+
+  // Arrow attached at top of rectangle, pointing up
+  const tooltipArrow = document.createElement('div');  
+  tooltipArrow.style.position = 'absolute';  
+  tooltipArrow.style.width = '0';  
+  tooltipArrow.style.height = '0';  
+  tooltipArrow.style.borderLeft = '6px solid transparent';  
+  tooltipArrow.style.borderRight = '6px solid transparent';  
+  tooltipArrow.style.borderBottom = '6px solid #222'; // arrow pointing up  
+  tooltipArrow.style.top = '-6px';  
+  tooltipArrow.style.left = '12px';  
+  tooltipArrow.style.transform = 'none';  
+  tooltip.appendChild(tooltipArrow);  
+
+  document.body.appendChild(tooltip);  
+
+  function showTooltip(field, message) {  
+      tooltip.innerHTML = '';  
+      const textSpan = document.createElement('span');  
+      textSpan.textContent = message;  
+      tooltip.appendChild(textSpan);  
+      tooltip.appendChild(tooltipArrow);  
+
+      tooltip.style.display = 'block';  
+      tooltip.style.top = '0';  
+      tooltip.style.left = '0';  
+
+      requestAnimationFrame(() => {  
+          const rect = field.getBoundingClientRect();  
+          const scrollY = window.scrollY || window.pageYOffset;  
+          const scrollX = window.scrollX || window.pageXOffset;  
+
+          const tooltipHeight = tooltip.offsetHeight;  
+          const tooltipWidth = tooltip.offsetWidth;  
+
+          // Tooltip below the field
+          const top = rect.bottom + scrollY + 8; // 8px margin  
+          const left = rect.left + scrollX + rect.width / 2 - tooltipWidth / 2 - 4; // slight left shift
+
+          tooltip.style.top = `${top}px`;  
+          tooltip.style.left = `${left}px`;  
+
+          // Arrow on top of rectangle pointing up
+          tooltipArrow.style.top = '-6px';  
+          tooltipArrow.style.left = '12px';  
+          tooltipArrow.style.transform = 'none';  
+
+          // Auto-hide tooltip after 5 seconds
+          setTimeout(() => {
+              tooltip.style.display = 'none';
+          }, 5000);
+      });  
+  }  
+
+  // --- MODAL OPEN/CLOSE ---  
+  function openModal(e){    
+      e.preventDefault();    
+      modal.style.display = 'flex';    
+      modal.setAttribute('aria-hidden','false');    
+      document.getElementById('fullName').focus();    
+  }    
+
+  function closeModal(){    
+      modal.style.display = 'none';    
+      modal.setAttribute('aria-hidden','true');    
+  }    
+
+  openButtons.forEach(btn => btn.addEventListener('click', openModal));    
+  closeModalBtn.addEventListener('click', closeModal);    
+  cancelBtn.addEventListener('click', closeModal);    
+
+  modal.addEventListener('click', e => {    
+      if(e.target === modal) closeModal();    
+  });    
+
+  document.addEventListener('keydown', e => {    
+      if(e.key === 'Escape') closeModal();    
+  });    
+
+  // --- SUBMIT HANDLER ---  
+  modalSubmit.addEventListener('click', () => {    
+      const fields = [  
+          { id: 'fullName', name: 'Full Name' },  
+          { id: 'email', name: 'Email' },  
+          { id: 'phone', name: 'Phone' },  
+          { id: 'username', name: 'Username' },  
+          { id: 'plan', name: 'Plan' }  
+      ];  
+
+      const firstEmpty = fields.find(f => !document.getElementById(f.id).value.trim());  
+      if(firstEmpty) {  
+          showTooltip(document.getElementById(firstEmpty.id), `⚠️ Please fill in this field.`);  
+          document.getElementById(firstEmpty.id).focus();  
+          return;  
+      }  
+
+      modalSubmit.textContent = "Please wait...";    
+      modalSubmit.style.opacity = "0.6";    
+      modalSubmit.disabled = true;    
+
+      // Redirect to Selar in the same tab
+      setTimeout(() => {    
+          window.location.href = selarLink;    
+          closeModal();    
+      }, 4000);    
+  });    
+
+});
+</script>
+</body>
+ </html>
